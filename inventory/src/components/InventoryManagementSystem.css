@@ -1,8 +1,9 @@
 .inventory-container {
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 0 auto;
     padding: 20px;
     font-family: Arial, sans-serif;
+    gap: 5rem;
   }
   
   .inventory-form-section,
@@ -12,6 +13,7 @@
     padding: 20px;
     margin-bottom: 20px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+ 
   }
   
   .inventory-form {
