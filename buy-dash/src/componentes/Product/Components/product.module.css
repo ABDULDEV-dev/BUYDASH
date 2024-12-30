@@ -1,0 +1,10 @@
+.buttonstyle{
+    background-color: white;
+    color: green;
+    padding: 5px;
+    height: 3rem;
+    width: 7rem;
+    border: 1px dashed;
+    border-color: green;
+
+}

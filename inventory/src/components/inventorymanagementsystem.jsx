@@ -1,5 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import './InventoryManagementSystem.css';
+import Header from'./Header'
+
+//let name =  prompt("WHAT IS YOUR NAME");
+
+//alert("Hello" + " " + name);
+
 
 function InventoryManagementSystem() {
   const [inventory, setInventory] = useState([]);
@@ -7,7 +13,7 @@ function InventoryManagementSystem() {
     name: '',
     category: '',
     quantity: 0,
-    price: 0
+    price: ''
   });
 
   // Load inventory from local storage on initial render
@@ -68,6 +74,7 @@ function InventoryManagementSystem() {
 
   return (
     <div className="inventory-container">
+      <Header />
       <div className="inventory-form-section">
         <h2>Inventory Management System</h2>
         <form onSubmit={addItem} className="inventory-form">
@@ -89,13 +96,12 @@ function InventoryManagementSystem() {
             type="number" 
             placeholder="Quantity" 
             value={newItem.quantity}
-            onChange={(e) => setNewItem({...newItem, quantity: parseInt(e.target.value) || 0})}
+            onChange={(e) => setNewItem({...newItem, quantity: parseInt(e.target.value)})}
             required
           />
           <input 
             type="text" 
             placeholder="Price" 
-            step="0.01"
             value={newItem.price}
             onChange={(e) => setNewItem({...newItem, price: e.target.value})}
             required
@@ -113,7 +119,7 @@ function InventoryManagementSystem() {
               <th>Category</th>
               <th>Quantity</th>
               <th>Price</th>
-              <th>Last Updated</th>
+              <th>DATE</th>
               <th>Actions</th>
             </tr>
           </thead>

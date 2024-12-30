@@ -1,0 +1,12 @@
+.title{
+    font-size: 40px;
+    color: blue;
+}
+
+.product-container{
+    display: flex;
+    gap: 20px;
+    height: 100h;
+    width: 100vw;
+    justify-content: center;
+}
